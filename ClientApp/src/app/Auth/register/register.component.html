@@ -1,0 +1,164 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Register
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="saveUser()">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">First Name</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" minlength="10" name="firstNameString" id="" [(ngModel)]="user.firstName" placeholder="Enter your first name" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Last Name</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="text" name="lastNameString" id="" [(ngModel)]="user.lastName" placeholder="Enter your last name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Email</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="text" name="emailString" id="" [(ngModel)]="user.email" placeholder="Enter your email" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Password</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="password" name="passwordString" id="" [(ngModel)]="user.password" placeholder="Enter your password" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Gender</span>
+                        </div>
+                        <div class="col col-md-6">
+                            <label>Male</label>&nbsp;
+                            <input type="radio" name="genderString" id="" [(ngModel)]="user.gender" value="male" /> &nbsp;
+                            <label>Female</label>&nbsp;
+                            <input type="radio" name="genderString" id="" [(ngModel)]="user.gender" value="female" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Address 1</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="text" name="address1String" id="" [(ngModel)]="user.address1" placeholder="Enter your address" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Address 2</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="text" name="address2String" id="" [(ngModel)]="user.address2" placeholder="Enter your address" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">City</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="text" name="cityString" id="" [(ngModel)]="user.city" placeholder="Enter your city" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">State</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="text" name="stateString" id="" [(ngModel)]="user.state" placeholder="Enter your state" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Country</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="text" name="countryString" id="" [(ngModel)]="user.country" placeholder="Enter your country" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Zip Code</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="number" name="zipCodeNumber" id="" [(ngModel)]="user.zipCode" placeholder="Enter your zip" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-3">
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success float-right" value="Register" />
+                        </div>
+                    </div>
+                    <div class="col col-md-3">
+                        <div class="form-group">
+                            <input type="button" class="btn btn-danger float-left" value="Cancle" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="jumbotron d-block">Pema</div>
+        </div>
+        <div class="carousel-item">
+            <div class="jumbotron d-block">Wangchu</div>
+        </div>
+        <div class="carousel-item">
+            <div class="jumbotron d-block">Sherpa</div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>-->

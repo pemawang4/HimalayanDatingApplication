@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">Please select your preferences and proceed</div>
+        <div class="card-body">
+            <form (ngSubmit)="savePreference()">
+                <div class="form-group">
+                    <label>Which gender are you interested in</label>
+                    <select class="form-select form-control" aria-label="Default select example" name="genderString" id="gender" [(ngModel)]="preference.gender">
+                        <option selected>Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Please select enthnicity</label>
+                    <select class="form-select form-control" aria-label="Default select example" name="enthnicityString" id="enthnicity" [(ngModel)]="preference.enthnicity">
+                        <option selected>Select enthicity</option>
+                        <option value="sherpa">Sherpa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Please select religion</label>
+                    <select class="form-select form-control" aria-label="Default select example" name="religionString" id="religion" [(ngModel)]="preference.religion">
+                        <option selected>Select religion</option>
+                        <option value="buddhist">Buddhist</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="christian">Christian</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Please select region</label>
+                    <select class="form-select form-control" aria-label="Default select example" name="regionString" id="region" [(ngModel)]="preference.region">
+                        <option selected>Select region</option>
+                        <option value="solu">Solu</option>
+                        <option value="khumbu">Khumbu</option>
+                        <option value="dolpa">Dolpa</option>
+                        <option value="manang">Manang</option>
+                        <option value="mustang">Mustang</option>
+                        <option value="manang">Manang</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Education Details</label>
+                    <select class="form-select form-control" aria-label="Default select example" name="educationString" id="education" [(ngModel)]="preference.education">
+                        <option selected>Select education</option>
+                        <option value="highSchool">High School</option>
+                        <option value="bachelor">Bachelor</option>
+                        <option value="masters">Masters</option>
+                        <option value="phd">Phd</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-success" type="submit" value="Next" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

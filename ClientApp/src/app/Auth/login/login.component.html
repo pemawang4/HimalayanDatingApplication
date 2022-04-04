@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Login
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="userLogin()">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Email</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [class.is-invalid]="email.invalid && email.touched" required type="email" name="email" [(ngModel)]="user.email" placeholder="Enter your email" />
+                            <!--<div *ngIf="user.email.invalid" class="alert alert-danger">
+                                Please enter the valid email
+                            </div>-->
+                            <!--<div *ngIf="email.errors &&(email.touched || user.email.dirty)" class="text-error">
+                                <div [hidden]="!email.errors?.pattern">
+                                    Invalid pattern
+                                </div>
+                            </div>-->
+                            <div *ngIf="email.errors && (email.invalid && email.touched)">
+                                <small class="text-danger" *ngIf="email.errors.pattern">Please provide a valid email address</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col col-md-3">
+                            <span class="float-right">Password</span>
+                        </div>
+                        <div class="col col-md-9">
+                            <input class="form-control" type="password" required name="password" #password="ngModel" [(ngModel)]="user.password" placeholder="Enter your password" />
+                            <div *ngIf="password.errors  && (email.invalid && email.touched)">
+                                <small class="text-danger">Please enter password before login.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-3">
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success float-right" value="Login" />
+                        </div>
+                    </div>
+                    <div class="col col-md-3">
+                        <div class="form-group">
+                            <input type="button" class="btn btn-danger float-left" value="Cancle" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
